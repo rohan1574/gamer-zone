@@ -78,13 +78,16 @@ align-items: center;
 
 }
 #tiktok{
-    width: 24px;
-height: 24px;
+    width: 33.916px;
+    height: 25px;
+    padding-bottom: -10px;
 flex-shrink: 0;
 color: #0B0223;
-background: red;
+/* background: red; */
 border-radius: 5px;
 margin-top: 5px;
+text-align: center;
+align-items: center;
 }
 
 
