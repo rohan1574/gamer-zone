@@ -6,7 +6,7 @@
     list-style: none;
 }
 /* nav menu */
-header{
+.header{
     display: flex;
     position: fixed;
     top: 0;
@@ -63,6 +63,7 @@ border-radius: 8px;
 background: rgba(11, 2, 35, 0.10);
 padding: 5px 5px 5px 5px;
 align-items: center;
+display: flex;
 
 
 }
@@ -74,12 +75,16 @@ border-radius: 5px;
 margin-top: 5px;
 align-items: center;
 
+
 }
 #tiktok{
     width: 24px;
 height: 24px;
 flex-shrink: 0;
 color: #0B0223;
+background: red;
+border-radius: 5px;
+margin-top: 5px;
 }
 
 
@@ -264,11 +269,13 @@ line-height: normal;
     width: 342px;
     /* width: 50%; */
     height: 400px;
-    background-image:url(../images/Rectangle\ 4.png) ;
+    background-image:url(../images/Rectangle\ 7.png) ;
     background: cover;
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
+    border-radius: 16px;
+
 }
 #play{
     color: #FFF;
@@ -283,8 +290,9 @@ line-height: normal;
 #play:hover{
     color: red;
     font-size: 50px;
-    padding: 50px;
+    padding: 180px;
     border-radius: 50%;
+    margin-left: -20px;
     position: relative;
     align-items: center;
 }
@@ -296,6 +304,14 @@ line-height: normal;
     width: 342px;
 height: 400px;
 flex-shrink: 0;
+}
+.download{
+    color: #534C64;
+font-family: Work Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 30px; /* 150% */
 }
 
 
@@ -313,6 +329,24 @@ flex-shrink: 0;
     align-items: center;
     text-align: center;
     margin: 300px 0px 0px 0px;
+    
+}
+.section-title{
+    text-align: left;
+font-family: Work Sans;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 60px; /* 125% */
+}
+.online{
+    color: #534C64;
+text-align: left;
+font-family: Work Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 166.667% */
 }
 .features-img{
     width: 634.833px;
@@ -378,16 +412,16 @@ text-align: center;
 #start{
 
 }
-/* .facts-card-container #cards { */
-    /* border-radius: 8px; */
-    /* border: 1px solid #FF900E; */
-    /* text-align: center; */
-    /* padding: 30px; */
-/* } */
+.facts-card-container #cards  {
+    border-radius:50px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 10px;
+}
  
  /* footer */
 footer{
-    background:red;
+    background: #0B0223;
     height: auto;
     width: 99vw;
     height: 200px;
@@ -397,8 +431,10 @@ footer{
 #logos{
     align-items: center;
     text-align: center;
-    margin: 10px 700px;
+    margin: 10px 650px ;
+    color: #FFF;
 }
+
 .footer-content{
     
     display: flex;
@@ -412,7 +448,7 @@ footer{
     text-align: center;
     align-items: center;
     gap: 20px;
-    color: #3C354F;
+    color:#FFF;
 text-align: center;
 font-family: Work Sans;
 font-size: 18px;
@@ -420,6 +456,11 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 justify-content: center;
+margin-top: 10px;
+}
+.navbars  a{
+    color: #FFF;
+    margin-top: 10px;
 }
 .footer-content h3{
     font-size: 1.8rem;
@@ -439,8 +480,20 @@ justify-content: center;
     margin: 1rem 0 3rem 0;
     gap: 20px;
     
-color: #FFF;
+/* color: #FFF; */
     
+}
+#tiktok{
+    width: 40px;
+height: 40px;
+flex-shrink: 0;
+color: #FFF;
+}
+#youtube{
+    width: 40px;
+height: 40px;
+flex-shrink: 0;
+color: #FFF;
 }
 .socials i{
     margin: 0 10px;
@@ -453,29 +506,26 @@ flex-shrink: 0;
     height: 100px;
 }
 .footer-bottom{
-    color: #0B0223;
+    color:#FFF;
     margin-top:  -30px;
 }
 
 /* mobile */
-@media screen and(max-width:576) {
-    header{
-        flex-direction: column;
-    }
-    .navbar{
-        flex-direction: column;
-    }
-    .logo{
-     flex-direction: column;
-    }
-    .main{
-        flex-direction: column;
-        grid-template-columns: repeat(2, .5fr);
-    }
-    .sponsors-img{
-        flex-direction: column;
-    }
-    .socials{
-        flex-direction: column;
-    }
+.hide{
+    display: none;
+}
+
+@media screen and (max-width:576) {
+   .main{
+    grid-template-columns: 1fr;
+   }
+   .logo{
+    flex-direction: column;
+   }
+   .navbar, .banner, .section-title, .features, .sponsors ,footer, nav > ul{
+    flex-direction: column;
+    padding: 10px;
+   
+   }
+   
 }
